@@ -59,10 +59,22 @@ export class TestScoreComponent implements OnInit {
 
   deleteTests(index: number) {
     this.tests.splice(index, 1);
+    this.saveToLocalStorage();
   }
 
   saveToLocalStorage() {
     localStorage.setItem('tests', JSON.stringify(this.tests));
+  }
+
+  computeGrade() {
+    this.calculate();
+  }
+
+  calculate() {
+    for (let i = 0; i > this.tests.length; i++) {
+
+    }
+
   }
 
 }
